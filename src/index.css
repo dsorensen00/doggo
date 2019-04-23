@@ -4,7 +4,9 @@ li{
     margin-right:15px;
 }
 
-
+body{
+    /* background-image: linear-gradient(90deg, ) */
+}
 .rate-btn{
     background:transparent;
     border:solid .75px;

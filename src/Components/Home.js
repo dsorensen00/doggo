@@ -27,6 +27,10 @@ export default ()=>{
         
     }
 
+    const makeBark = () =>{
+        const bark = new Audio();
+        bark.src = "./Sounds/bark.wav"
+    }
    
     useEffect(
          () => {
@@ -52,9 +56,6 @@ export default ()=>{
                     <button value='14' onClick={e=>cacheMyDoggo(e)} className="btn btn-primary button-hover-special">14</button>
                     <button value='15' onClick={e=>cacheMyDoggo(e)} className="btn btn-primary button-hover-special">15</button>
                     <button value='16' onClick={e=>cacheMyDoggo(e)} className="btn btn-primary button-hover-special">16</button>
-                </div>
-                <div>
-                    <h1 id="rated"></h1>
                 </div>
             </div>
         </>
