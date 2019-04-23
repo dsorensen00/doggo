@@ -19,7 +19,7 @@ export default ()=>{
     const cacheMyDoggo = async (e)=>{
         e.preventDefault();
         console.log(e.target.value);
-        await doggo.push({
+        await doggo.unshift({
             "URL":`${url}`,
             "Rating":e.target.value
         });

@@ -19,13 +19,12 @@ export default ()=>{
     
     const cacheMyDoggo = async (e)=>{
         e.preventDefault();
-        console.log(e.target.value);
-        await doggo.push({
+        await doggo.unshift({
             "URL":`${url}`,
             "Rating":e.target.value
         });
         localStorage.setItem('doggo', JSON.stringify(doggo));
-        console.log(doggo)
+        
     }
 
    
@@ -39,18 +38,23 @@ export default ()=>{
     return(
         <>
            
-            <div>
-                <img src={url} alt="Cute Dog"/>
-                <button onClick={ fetchMyDoggo }>GIVE ME A NEW DOGGO</button>
+            <div className="container text-center">
+                <div className="row justify-content-around">    
+                    <img src={url} alt="Cute Dog" height="500px" width="500px"/>
+                </div>
+                <button onClick={ fetchMyDoggo } className="btn btn-primary button-hover">GIVE ME A NEW DOGGO</button>
+                <h1>Rate this Doggo between 10-16</h1>
+                <div className="row justify-content-around">
+                    <button value='10' onClick={e=>cacheMyDoggo(e)} className="btn btn-primary button-hover-special">10</button>
+                    <button value='11' onClick={e=>cacheMyDoggo(e)} className="btn btn-primary button-hover-special">11</button>
+                    <button value='12' onClick={e=>cacheMyDoggo(e)} className="btn btn-primary button-hover-special">12</button>
+                    <button value='13' onClick={e=>cacheMyDoggo(e)} className="btn btn-primary button-hover-special">13</button>
+                    <button value='14' onClick={e=>cacheMyDoggo(e)} className="btn btn-primary button-hover-special">14</button>
+                    <button value='15' onClick={e=>cacheMyDoggo(e)} className="btn btn-primary button-hover-special">15</button>
+                    <button value='16' onClick={e=>cacheMyDoggo(e)} className="btn btn-primary button-hover-special">16</button>
+                </div>
                 <div>
-                    <h1>Rate this Doggo between 10-16</h1>
-                    <button value='10' onClick={e=>cacheMyDoggo(e)}>10</button>
-                    <button value='11' onClick={e=>cacheMyDoggo(e)}>11</button>
-                    <button value='12' onClick={e=>cacheMyDoggo(e)}>12</button>
-                    <button value='13' onClick={e=>cacheMyDoggo(e)}>13</button>
-                    <button value='14' onClick={e=>cacheMyDoggo(e)}>14</button>
-                    <button value='15' onClick={e=>cacheMyDoggo(e)}>15</button>
-                    <button value='16' onClick={e=>cacheMyDoggo(e)}>16</button>
+                    <h1 id="rated"></h1>
                 </div>
             </div>
         </>
