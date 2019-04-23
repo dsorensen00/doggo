@@ -3,14 +3,17 @@ li{
     font-size: 130%;
     margin-right:15px;
 }
-
-body{
-    /* background-image: linear-gradient(90deg, ) */
+img{
+    border-radius: 15px;
 }
-.rate-btn{
-    background:transparent;
-    border:solid .75px;
-    border-color: rgba(31, 31, 31, 0.694);
+.top{
+    top:5vh;
+    padding:15px;
+    background: #f4f4f4;
+    border-radius: 7px;
+}
+body{
+     background-color: #f88379; 
 }
 .button-hover{
     margin:10px;
@@ -26,4 +29,22 @@ body{
 }
 .button-hover:hover{
     background-color:blue
+}
+
+.list-item{
+    margin-top: 10px;
+}
+.top-list-item{
+    margin-top:5vh;
+}
+.bottom-list-item{
+    margin-bottom:5vh;
+}
+.space{
+    margin-right:5vh;
+    background-color: #f4f4f4;
+    border-radius: 7px;
+}
+.space-left{
+    margin-left:5vh;
 }
