@@ -37,10 +37,7 @@ export default ()=>{
         
     }
 
-    const makeBark = () =>{
-        const bark = new Audio();
-        bark.src = "./Sounds/bark.wav"
-    }
+
 
     useEffect(
         ()=>{
